@@ -1,6 +1,6 @@
 {
-  "name": "react-iconfont-cli",
-  "version": "2.0.0",
+  "name": "nit-iconfont-cli",
+  "version": "1.0.0",
   "main": "index.js",
   "keywords": [
     "iconfont",
@@ -11,12 +11,12 @@
     "iconfont.cn"
   ],
   "repository": "git@github.com:iconfont-cli/react-iconfont-cli.git",
-  "author": "范文华 <531362022@qq.com>",
+  "author": "hbx",
   "license": "MIT",
   "bin": {
-    "iconfont": "./commands/help.js",
-    "iconfont-init": "./commands/createJson.js",
-    "iconfont-h5": "./commands/createIcon.js"
+    "nit-iconfont": "./commands/help.js",
+    "nit-iconfont-init": "./commands/createJson.js",
+    "nit-iconfont-h5": "./commands/createIcon.js"
   },
   "peerDependencies": {
     "react": "*"
@@ -28,7 +28,8 @@
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "mkdirp": "^0.5.1",
-    "tslib": "^1.10.0"
+    "tslib": "^1.10.0",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",

@@ -1,3 +1,10 @@
+/*
+ * @Author: DG
+ * @Date: 2020-10-13 14:05:03
+ * @LastEditors: DG
+ * @LastEditTime: 2020-10-14 15:11:28
+ * @Description: file content
+ */
 import path from 'path';
 import fs from 'fs';
 import colors from 'colors';
@@ -28,14 +35,15 @@ export const getConfig = () => {
 
   const config = require(targetFile) as Config;
 
-  if (!config.symbol_url || !/^(https?:)?\/\//.test(config.symbol_url)) {
-    console.warn(colors.red('You are required to provide symbol_url'));
-    process.exit(1);
-  }
+  // 不在进行url规则检验
+  // if (!config.symbol_url || !/^(https?:)?\/\//.test(config.symbol_url)) {
+  //   console.warn(colors.red('You are required to provide symbol_url'));
+  //   process.exit(1);
+  // }
 
-  if (config.symbol_url.indexOf('//') === 0) {
-    config.symbol_url = 'http:' + config.symbol_url;
-  }
+  // if (config.symbol_url.indexOf('//') === 0) {
+  //   config.symbol_url = 'http:' + config.symbol_url;
+  // }
 
   config.save_dir = config.save_dir || defaultConfig.save_dir;
   config.default_icon_size = config.default_icon_size || defaultConfig.default_icon_size;
